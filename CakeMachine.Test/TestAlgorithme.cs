@@ -29,6 +29,7 @@ public class TestAlgorithme
 
     [Theory]
     [MemberData(nameof(CasTest))]
+    [InlineData(typeof(AlgorithmeRendu), false)]
     public async Task TestNombreGâteauxEn5Secondes(Type algorithme, bool sync)
     {
         var runner = new SingleAlgorithmRunner(algorithme);
